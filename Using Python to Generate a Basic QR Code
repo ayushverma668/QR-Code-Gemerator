@@ -1,0 +1,157 @@
+$ python -m pip install segno
+
+# basic_qrcode.py
+
+import segno
+
+segno.make_qr("Hello, World")
+
+# basic_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save("img.png")
+
+$ python basic_qrcode.py
+
+# scaled_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "scaled_qrcode.png",
+    scale=5,
+)
+
+$ python scaled_qrcode.py
+
+# borderless_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "borderless_qrcode.png",
+    scale=5,
+    border=0,
+)
+
+$ python borderless_qrcode.py
+
+# wide_border_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "wide_border_qrcode.png",
+    scale=5,
+    border=10,
+)
+
+$ python wide_border_qrcode.py
+
+# lightblue_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "lightblue_qrcode.png",
+    scale=5,
+    light="lightblue",
+)
+
+$ python lightblue_qrcode.py
+
+# darkblue_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "darkblue_qrcode.png",
+    scale=5,
+    dark="darkblue",
+)
+
+$ python darkblue_qrcode.py
+
+
+# darkblue_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "darkblue_qrcode.png",
+    scale=5,
+    dark="darkblue",
+    quiet_zone="maroon",
+)
+
+# green_datadark_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "green_datadark_qrcode.png",
+    scale=5,
+    light="lightblue",
+    dark="darkblue",
+    data_dark="green",
+)
+
+$ python green_datadark_qrcode.py
+
+# green_datamodules_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode.save(
+    "green_datamodules_qrcode.png",
+    scale=5,
+    light="lightblue",
+    dark="darkblue",
+    data_dark="green",
+    data_light="lightgreen",
+)
+
+$ python -m pip install pillow qrcode-artistic
+
+# rotated_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+
+qrcode_rotated = qrcode.to_pil().rotate(45)
+qrcode_rotated.save("rotated_qrcode.png")
+
+$ python rotated_qrcode.py
+
+# rotated_qrcode.py
+
+import segno
+
+qrcode = segno.make("Hello, World")
+
+qrcode_rotated = qrcode.to_pil().rotate(45, expand=True)
+qrcode_rotated.save("rotated_qrcode.png")
+
+# formatted_rotated_qrcode.py
+
+import segno
+
+qrcode = segno.make_qr("Hello, World")
+qrcode_rotated = qrcode.to_pil(
+    scale=5,
+    light="lightblue",
+    dark="green",
+).rotate(45, expand=True)
+qrcode_rotated.save("formatted_rotated_qrcode.png")
+
