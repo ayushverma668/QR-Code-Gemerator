@@ -1,0 +1,5 @@
+Use make_qr() and .save() to create black-and-white QR codes
+Adjust the module size and quiet zone of your QR code
+Personalize the dark and light modules with your favorite colors
+Use the .to_pil().rotate() method to rotate your QR codes
+Create QR codes with animated backgrounds using .to_artistic()
